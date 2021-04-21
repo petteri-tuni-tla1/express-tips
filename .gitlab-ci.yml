@@ -1,0 +1,15 @@
+stages:
+  - build
+
+compile the tips:
+  stage: build
+  script:      
+    - echo "Prepre delivery package."
+    - echo "Create directory for delivery. Flatten the tips files to simple 1.txt, 2.txt, ..."
+    - mkdir delivery
+    - cp -p -r bin delivery/.
+    - mkdir -p delivery/tips
+    - echo "Here are the tips ... ready for flattening:"
+    - find tips -name "*.txt"
+    
+#TODO: complete the compilation job. Add another for delivery. How about testing?
