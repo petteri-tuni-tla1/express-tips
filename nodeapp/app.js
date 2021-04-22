@@ -7,7 +7,7 @@ var dt = require('./modules/totd.js')
 app.use('/public', express.static('public'))
 
 app.get('/', (req, res) => {
-	res.send('Hello Express!')
+	res.send('Hello Express! Use the /totd/<nr> to fetch tips')
 })
 
 app.get('/totd/:id', (req, res) => {
@@ -15,14 +15,18 @@ app.get('/totd/:id', (req, res) => {
 	res.send(dt.readTip(req.params['id']) + "\n")	
 })
 
-app.get('/time', (req, res) => {
-	res.send("Current date and time (according to node) is \n" + dt.myDateTime() + "\n")
-})
+// Populate data structures for delivering the tips files
+dt.scanAllFiles();
 
+/*
+** These are for testing only at this point:
+*/
 app.get('/file/:name', (req, res) => {
 	res.send(dt.readFile(req.params['name']) + "\n")		
 })
-
+app.get('/time', (req, res) => {
+	res.send("Current date and time (according to node) is \n" + dt.myDateTime() + "\n")
+})
 app.get('/api/*', (req, res) => {
 	res.send('Hello Express Any!'+req.path)
 })
