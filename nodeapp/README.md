@@ -27,6 +27,19 @@ curl http://localhost:3000/foo
 curl http://localhost:3000/asfga/asg
 ````
 
+
+## Nodemon
+
+Install nodemon as development dependency and run the service with nodemon:
+
+````
+npm install --save-dev nodemon
+nodemon ./app.js
+````
+
+
+
+
 # Links
 
 * https://expressjs.com/en/starter/installing.html
