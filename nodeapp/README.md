@@ -29,4 +29,6 @@ curl http://localhost:3000/asfga/asg
 
 # Links
 
-* https://expressjs.com/en/starter/hello-world.html
+* https://expressjs.com/en/starter/installing.html
+* https://www.npmjs.com/package/nodemon
+

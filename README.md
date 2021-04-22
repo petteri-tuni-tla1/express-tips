@@ -14,5 +14,6 @@ It contains the actual tips files and the script. Both are deployed to remote ho
 * https://docs.gitlab.com/ee/ci/pipelines/
 * https://docs.gitlab.com/ee/ci/ssh_keys/
 * https://www.udemy.com/course/gitlab-ci-pipelines-ci-cd-and-devops-for-beginners/
-* https://expressjs.com/en/starter/installing.html
+
+
 
